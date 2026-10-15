@@ -42,12 +42,24 @@ Internet -> ALB-SG (80) -> App-SG (80, source: ALB-SG only) -> DB-SG (3306, sour
 
 ## Verification
 
-Screenshots are in [`screenshots/`](screenshots/):
+Screenshots are in [`screenshots/`](screenshots/).
 
 - Working site through the ALB DNS name, showing `DB connected`
 - Target Group `app-tg`: 2 healthy targets in different AZs
 - RDS security group rule: inbound 3306 only from App-SG
 - VPC resource map: subnets, route tables, IGW, NAT
+
+### Working site
+![Working site](screenshots/working-site.png)
+
+### Target Group
+![Target Group](screenshots/target-group.png)
+
+### RDS Security Group
+![RDS Security Group](screenshots/RDS-security-group.png)
+
+### VPC Resource Map
+![VPC Resource Map](screenshots/vpc-resource-map.png)
 
 ## Troubleshooting Notes
 
